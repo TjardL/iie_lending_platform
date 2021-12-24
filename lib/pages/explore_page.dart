@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+import 'package:iieproject/pages/manage_page.dart';
 import 'package:iieproject/styles.dart';
 
 class ExplorePage extends StatefulWidget {
@@ -12,15 +14,79 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
+
+  late PageController controller;
+  int getPageIndex = 0;
+
+  @override
+  void initState() {
+
+    controller = PageController();
+    
+    super.initState();
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: _buildAppBar(),
-      body: _buildBody(),
+      appBar:getPageIndex==0? _buildAppBar():null,
+      body: PageView(
+                controller: controller,
+                children: <Widget>[
+                  _buildBody(),
+                  ManagePage(),
+
+                  
+                  //PatientFMSPage(),
+                ],
+                onPageChanged: _whenPageChanges,
+              ),
+      bottomNavigationBar: _buildBottomNavigationBar(),
     );
   }
+
+  _buildBottomNavigationBar() {
+    
+    return CupertinoTabBar(
+      //type: BottomNavigationBarType.fixed,
+      currentIndex: getPageIndex, // this will be set when a new tab is tapped
+      items: [
+        BottomNavigationBarItem(
+          icon: new Icon(Icons.search),
+          label: 'Explore',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.description_outlined),
+          // new Image(
+          //   image: Icon(Icons.fitness_center),
+          //   //AssetImage(getPageIndex==1?"images/exercise_icon_blue.png":"images/exercise_icon.png"),
+          //   height: 22,
+          // ),
+          label: 'Manage',
+        ),
+        BottomNavigationBarItem(
+            icon: new Icon(Icons.chat_bubble_outline_rounded), label: 'Inbox'),
+        BottomNavigationBarItem(icon: new Icon(Icons.account_circle_outlined),label: 'Profile'),
+      ],
+      onTap: _onTapChangePage,
+      activeColor: Theme.of(context).primaryColor,
+    );
+  }
+
+  _onTapChangePage(int pageIndex) {
+    controller.jumpToPage(pageIndex);
+    // controller.animateToPage(pageIndex,
+    //     duration: Duration(milliseconds: 400), curve: Curves.easeIn);
+  }
+   _whenPageChanges(int pageIndex) {
+    setState(() {
+      this.getPageIndex = pageIndex;
+    });
+  }
+
 
   _buildBody() {
     return ListView(
@@ -78,8 +144,8 @@ class _ExplorePageState extends State<ExplorePage> {
               ),
             ),
           ],
-        ),SizedBox(height:48
         ),
+        SizedBox(height: 48),
         Padding(
           padding: EdgeInsets.all(16),
           child: Text(
@@ -89,10 +155,14 @@ class _ExplorePageState extends State<ExplorePage> {
         ),
         Container(height: 300, child: _getExampleOffers()),
         Padding(
-          padding: const EdgeInsets.only(left:16.0,top:8,bottom:24),
-          child: Container(child:Text("All offers",style: TextStyles.link,)),
+          padding: const EdgeInsets.only(left: 16.0, top: 8, bottom: 24),
+          child: Container(
+              child: Text(
+            "All offers",
+            style: TextStyles.link,
+          )),
         ),
-        SizedBox(height:48),
+        SizedBox(height: 48),
         Padding(
           padding: EdgeInsets.all(16),
           child: Text(
@@ -100,7 +170,10 @@ class _ExplorePageState extends State<ExplorePage> {
             style: TextStyles.h2,
           ),
         ),
-        Container(height:300,child: _getBrowseCategories(),)
+        Container(
+          height: 300,
+          child: _getBrowseCategories(),
+        )
       ],
     );
   }
@@ -135,7 +208,7 @@ class _ExplorePageState extends State<ExplorePage> {
 
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(100.0),
-              borderSide: BorderSide(width: 1,color: Colors.black12),
+              borderSide: BorderSide(width: 1, color: Colors.black12),
             ),
             labelStyle: TextStyle(
               color: Colors.black87,
@@ -481,5 +554,4 @@ class _ExplorePageState extends State<ExplorePage> {
       ],
     );
   }
-
 }
