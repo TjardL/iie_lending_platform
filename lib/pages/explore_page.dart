@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+import 'package:iieproject/pages/inbox_page.dart';
 import 'package:iieproject/pages/manage_page.dart';
+import 'package:iieproject/pages/product_detail_page.dart';
 import 'package:iieproject/styles.dart';
 
 class ExplorePage extends StatefulWidget {
@@ -14,17 +16,14 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-
   late PageController controller;
   int getPageIndex = 0;
 
   @override
   void initState() {
-
     controller = PageController();
-    
-    super.initState();
 
+    super.initState();
   }
 
   @override
@@ -32,24 +31,17 @@ class _ExplorePageState extends State<ExplorePage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar:getPageIndex==0? _buildAppBar():null,
+      appBar: getPageIndex == 0 ? _buildAppBar() : null,
       body: PageView(
-                controller: controller,
-                children: <Widget>[
-                  _buildBody(),
-                  ManagePage(),
-
-                  
-                  //PatientFMSPage(),
-                ],
-                onPageChanged: _whenPageChanges,
-              ),
+        controller: controller,
+        children: <Widget>[_buildBody(), ManagePage(), InboxPage()],
+        onPageChanged: _whenPageChanges,
+      ),
       bottomNavigationBar: _buildBottomNavigationBar(),
     );
   }
 
   _buildBottomNavigationBar() {
-    
     return CupertinoTabBar(
       //type: BottomNavigationBarType.fixed,
       currentIndex: getPageIndex, // this will be set when a new tab is tapped
@@ -65,11 +57,12 @@ class _ExplorePageState extends State<ExplorePage> {
           //   //AssetImage(getPageIndex==1?"images/exercise_icon_blue.png":"images/exercise_icon.png"),
           //   height: 22,
           // ),
-          label: 'Manage',
+          label: 'Rentals',
         ),
         BottomNavigationBarItem(
             icon: new Icon(Icons.chat_bubble_outline_rounded), label: 'Inbox'),
-        BottomNavigationBarItem(icon: new Icon(Icons.account_circle_outlined),label: 'Profile'),
+        BottomNavigationBarItem(
+            icon: new Icon(Icons.account_circle_outlined), label: 'Profile'),
       ],
       onTap: _onTapChangePage,
       activeColor: Theme.of(context).primaryColor,
@@ -81,12 +74,12 @@ class _ExplorePageState extends State<ExplorePage> {
     // controller.animateToPage(pageIndex,
     //     duration: Duration(milliseconds: 400), curve: Curves.easeIn);
   }
-   _whenPageChanges(int pageIndex) {
+
+  _whenPageChanges(int pageIndex) {
     setState(() {
       this.getPageIndex = pageIndex;
     });
   }
-
 
   _buildBody() {
     return ListView(
@@ -225,51 +218,62 @@ class _ExplorePageState extends State<ExplorePage> {
       scrollDirection: Axis.horizontal,
       shrinkWrap: true,
       children: [
-        Container(
-          width: 200,
-          child: Card(
-            color: Theme.of(context).primaryColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12.0),
-            ),
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(12),
-                        topRight: Radius.circular(12)),
-                    child: Image.asset(
+        GestureDetector(
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ProductDetailPage(images: [
                       "lib/assets/guitar.jpeg",
-                      width: 200,
-                      fit: BoxFit.cover,
+                      "lib/assets/guitar.jpeg"
+                    ])),
+          ),
+          child: Container(
+            width: 200,
+            child: Card(
+              color: Theme.of(context).primaryColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(12),
+                          topRight: Radius.circular(12)),
+                      child: Image.asset(
+                        "lib/assets/guitar.jpeg",
+                        width: 200,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "Guitar",
-                          style: TextStyles.h3.copyWith(color: Colors.white),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Guitar",
+                            style: TextStyles.h3.copyWith(color: Colors.white),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          "20 kilometres away",
-                          style: TextStyles.body.copyWith(color: Colors.white),
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "20 kilometres away",
+                            style:
+                                TextStyles.body.copyWith(color: Colors.white),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

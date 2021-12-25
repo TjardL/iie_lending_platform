@@ -65,7 +65,7 @@ flutter:
   # example:
   fonts:
     - family: Sniglet
-    - fonts:
+      fonts:
       - asset: lib/assets/Sniglet-Regular.ttf 
   #
   # For details regarding fonts from package dependencies,
