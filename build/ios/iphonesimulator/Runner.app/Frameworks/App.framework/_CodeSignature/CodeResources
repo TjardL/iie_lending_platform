@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		VTNwQCw/trd1uMha3D/1WgZd9Ks=
+		kEXyriBAIRsDar9FZJSbQx9WISw=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		vKJkVIcw+LGHFnKJGwrQwCREv68=
+		GFiU4YyecvBZ0SY/lqt98C6iIyA=
 		</data>
 		<key>flutter_assets/NOTICES</key>
 		<data>
@@ -30,7 +30,11 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		sT+iWFbtFOGVRkrlPZbz1klqCcc=
+		7eJNRnrgFY7PB/Ftzos5jQ/eS4M=
+		</data>
+		<key>flutter_assets/lib/assets/Frank.jpg</key>
+		<data>
+		h14P0DzeG+FpoVw0wl4PJ+LxAsc=
 		</data>
 		<key>flutter_assets/lib/assets/Sniglet-Regular.ttf</key>
 		<data>
@@ -47,6 +51,10 @@
 		<key>flutter_assets/lib/assets/piano.png</key>
 		<data>
 		1W71zOqiOZnl70PENHVy/E//jiU=
+		</data>
+		<key>flutter_assets/lib/assets/sven.jpg</key>
+		<data>
+		rUcShQxtFHxS1oL69t8oTJX2kAs=
 		</data>
 		<key>flutter_assets/lib/assets/violin.jpeg</key>
 		<data>
@@ -67,22 +75,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VTNwQCw/trd1uMha3D/1WgZd9Ks=
+			kEXyriBAIRsDar9FZJSbQx9WISw=
 			</data>
 			<key>hash2</key>
 			<data>
-			OZMUzjrEmjMMlNzd2DeTDQp4op0+nnuKf8IKt0i+hsQ=
+			lzS414/pcecXWdUslmDSJocQJimKYDh1ur/wfRgrSfg=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vKJkVIcw+LGHFnKJGwrQwCREv68=
+			GFiU4YyecvBZ0SY/lqt98C6iIyA=
 			</data>
 			<key>hash2</key>
 			<data>
-			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
+			+HZQPtVThd4SFP6/ol/5d1Kz59SJKHCVuRZFSI1ypGU=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES</key>
@@ -122,11 +130,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sT+iWFbtFOGVRkrlPZbz1klqCcc=
+			7eJNRnrgFY7PB/Ftzos5jQ/eS4M=
 			</data>
 			<key>hash2</key>
 			<data>
-			J1jTuT7emCAO6AwSsD717RwayxSrGL2xTKDbmzhqtL4=
+			de9+07thZo0Sv3pYlvWBmUQ8giLiPmPTxAL0L7yESME=
+			</data>
+		</dict>
+		<key>flutter_assets/lib/assets/Frank.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			h14P0DzeG+FpoVw0wl4PJ+LxAsc=
+			</data>
+			<key>hash2</key>
+			<data>
+			CCSmnhjVvBxZXeYqaDAiZPK3vjExne5xo6t/6SxqnDo=
 			</data>
 		</dict>
 		<key>flutter_assets/lib/assets/Sniglet-Regular.ttf</key>
@@ -171,6 +190,17 @@
 			<key>hash2</key>
 			<data>
 			PO5Hr3ancbzyxT66Pi7vEizg2KGdK4dviwc4PnhsKBQ=
+			</data>
+		</dict>
+		<key>flutter_assets/lib/assets/sven.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rUcShQxtFHxS1oL69t8oTJX2kAs=
+			</data>
+			<key>hash2</key>
+			<data>
+			uaVr/PXk738dDVJ6GqQtF/E2ZIxSWf1kIJ3yvjqqnrU=
 			</data>
 		</dict>
 		<key>flutter_assets/lib/assets/violin.jpeg</key>

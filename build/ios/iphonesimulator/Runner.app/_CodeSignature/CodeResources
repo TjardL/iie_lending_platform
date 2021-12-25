@@ -110,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		q4faZz8NtqYcgMeZAHt1at+iCWs=
+		pY/GWt20b7lQNqfOyYViaINxVes=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,15 +118,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Nv5ONdCEVJlwny3f13+tsRQ2QtI=
+		dPtv0W1Xf+JLWQ7bQhOtPnZmI0A=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		VTNwQCw/trd1uMha3D/1WgZd9Ks=
+		kEXyriBAIRsDar9FZJSbQx9WISw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
-		vKJkVIcw+LGHFnKJGwrQwCREv68=
+		GFiU4YyecvBZ0SY/lqt98C6iIyA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES</key>
 		<data>
@@ -142,7 +142,11 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		sT+iWFbtFOGVRkrlPZbz1klqCcc=
+		7eJNRnrgFY7PB/Ftzos5jQ/eS4M=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/lib/assets/Frank.jpg</key>
+		<data>
+		h14P0DzeG+FpoVw0wl4PJ+LxAsc=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/lib/assets/Sniglet-Regular.ttf</key>
 		<data>
@@ -159,6 +163,10 @@
 		<key>Frameworks/App.framework/flutter_assets/lib/assets/piano.png</key>
 		<data>
 		1W71zOqiOZnl70PENHVy/E//jiU=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/lib/assets/sven.jpg</key>
+		<data>
+		rUcShQxtFHxS1oL69t8oTJX2kAs=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/lib/assets/violin.jpeg</key>
 		<data>
@@ -314,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gMHBi7dRQe0hk03f15mtrvKQkV4=
+		zVRw1UlQKzlPF6KjPNr75OXwlsQ=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -613,11 +621,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			q4faZz8NtqYcgMeZAHt1at+iCWs=
+			pY/GWt20b7lQNqfOyYViaINxVes=
 			</data>
 			<key>hash2</key>
 			<data>
-			wNLNI8GBzbYE47aIncwIC408QglNnwZXxj+3qQW5lrc=
+			w66BzkSFEltzMpZM7FZinGRQcjrBPIsTvDksAjSE3dM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -635,33 +643,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Nv5ONdCEVJlwny3f13+tsRQ2QtI=
+			dPtv0W1Xf+JLWQ7bQhOtPnZmI0A=
 			</data>
 			<key>hash2</key>
 			<data>
-			5FI6X6yPMBmKFsi1KRXRAuYodj0sHfi4cLir4ju8JMI=
+			CGHzwOspHv/gVbbEFD80UUv7XOWxtv92vcQSnf2SaTU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VTNwQCw/trd1uMha3D/1WgZd9Ks=
+			kEXyriBAIRsDar9FZJSbQx9WISw=
 			</data>
 			<key>hash2</key>
 			<data>
-			OZMUzjrEmjMMlNzd2DeTDQp4op0+nnuKf8IKt0i+hsQ=
+			lzS414/pcecXWdUslmDSJocQJimKYDh1ur/wfRgrSfg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vKJkVIcw+LGHFnKJGwrQwCREv68=
+			GFiU4YyecvBZ0SY/lqt98C6iIyA=
 			</data>
 			<key>hash2</key>
 			<data>
-			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
+			+HZQPtVThd4SFP6/ol/5d1Kz59SJKHCVuRZFSI1ypGU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES</key>
@@ -701,11 +709,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sT+iWFbtFOGVRkrlPZbz1klqCcc=
+			7eJNRnrgFY7PB/Ftzos5jQ/eS4M=
 			</data>
 			<key>hash2</key>
 			<data>
-			J1jTuT7emCAO6AwSsD717RwayxSrGL2xTKDbmzhqtL4=
+			de9+07thZo0Sv3pYlvWBmUQ8giLiPmPTxAL0L7yESME=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/lib/assets/Frank.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			h14P0DzeG+FpoVw0wl4PJ+LxAsc=
+			</data>
+			<key>hash2</key>
+			<data>
+			CCSmnhjVvBxZXeYqaDAiZPK3vjExne5xo6t/6SxqnDo=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/lib/assets/Sniglet-Regular.ttf</key>
@@ -750,6 +769,17 @@
 			<key>hash2</key>
 			<data>
 			PO5Hr3ancbzyxT66Pi7vEizg2KGdK4dviwc4PnhsKBQ=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/lib/assets/sven.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rUcShQxtFHxS1oL69t8oTJX2kAs=
+			</data>
+			<key>hash2</key>
+			<data>
+			uaVr/PXk738dDVJ6GqQtF/E2ZIxSWf1kIJ3yvjqqnrU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/lib/assets/violin.jpeg</key>
