@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+
 import 'package:iieproject/pages/inbox_page.dart';
 import 'package:iieproject/pages/manage_page.dart';
 import 'package:iieproject/pages/product_detail_page.dart';
@@ -32,7 +32,7 @@ class _ExplorePageState extends State<ExplorePage> {
       extendBodyBehindAppBar: true,
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: getPageIndex == 0 ? _buildAppBar() : null,
-      body: PageView(
+      body: PageView(physics: NeverScrollableScrollPhysics(),
         controller: controller,
         children: <Widget>[_buildBody(), ManagePage(), InboxPage()],
         onPageChanged: _whenPageChanges,

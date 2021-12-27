@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iieproject/pages/new_instrument_page.dart';
 import 'package:iieproject/styles.dart';
 import 'package:iieproject/widgets/listing_item.dart';
 
@@ -31,7 +32,12 @@ class _ManagePageState extends State<ManagePage> {
             Text(
               "Rentals",
               style: TextStyles.h1,
-            ),IconButton(onPressed: (){}, icon: Icon(Icons.add),iconSize: 32,)
+            ),IconButton(onPressed: (){
+             Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => NewInstrumentPage()));
+            }, icon: Icon(Icons.add),iconSize: 32,)
           ],
         ),
         SizedBox(height: 48),
